@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Einzelbeispiel_Santner</string>
+    <string name="input_label">Gib eine Matrikelnummer ein</string>
+    <string name="output_label">Antwort vom Server</string>
+    <string name="send_btn">Abschicken</string>
+    <string name="error_placeholder">Error: %s</string>
+    <string name="default_mnr">11843289</string>
+</resources>
