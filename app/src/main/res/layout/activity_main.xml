@@ -57,8 +57,17 @@
         android:id="@+id/btnSend"
         android:layout_width="163dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="64dp"
         android:text="@string/send_btn"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalc"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalc"
+        app:layout_constraintStart_toStartOf="@+id/btnCalc" />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="163dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/calc_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

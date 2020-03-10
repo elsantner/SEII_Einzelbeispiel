@@ -17,7 +17,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity  {
 
-    private Button btnSend;
+    private Button btnSend, btnCalc;
     private TextView lblOutput;
     private EditText txtMNr;
     private TCPClient client;
@@ -37,6 +37,17 @@ public class MainActivity extends AppCompatActivity  {
 
     private void setOnClickListeners() {
         setupSendClickListener();
+        setupCalculationListener();
+    }
+
+    private void setupCalculationListener() {
+        this.btnCalc.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lblOutput.setText(String.format(getResources().getString(R.string.calc_description),
+                        CalculationHelper.sortAndFilterPrimes(txtMNr.getText().toString())));
+            }
+        });
     }
 
     private void setupSendClickListener() {
@@ -77,6 +88,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private void getViews() {
         this.btnSend = findViewById(R.id.btnSend);
+        this.btnCalc = findViewById(R.id.btnCalc);
         this.lblOutput = findViewById(R.id.lblOutput);
         this.txtMNr = findViewById(R.id.editTextNumber);
     }
